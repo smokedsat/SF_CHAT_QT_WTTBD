@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>521</width>
+    <height>333</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout" stretch="0,1">
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout">
+      <item>
+       <widget class="QLabel" name="label">
+        <property name="text">
+         <string>Введите сообщение</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLineEdit" name="messageLineEdit"/>
+      </item>
+      <item>
+       <widget class="QPushButton" name="sendMessageButton">
+        <property name="text">
+         <string>Отправить всем</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="privateMessageSendButton">
+        <property name="text">
+         <string>Отправить лично</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <widget class="QSplitter" name="splitter">
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+      <widget class="QTextBrowser" name="commonChatBrowser"/>
+      <widget class="QTextBrowser" name="privateChatBrowser"/>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>521</width>
+     <height>25</height>
+    </rect>
+   </property>
+   <property name="contextMenuPolicy">
+    <enum>Qt::ActionsContextMenu</enum>
+   </property>
+   <widget class="QMenu" name="menuMain_menu">
+    <property name="title">
+     <string>Меню</string>
+    </property>
+    <widget class="QMenu" name="menuDelete_my_account">
+     <property name="title">
+      <string>Delete my account</string>
+     </property>
+     <widget class="QMenu" name="menuAre_you_sure">
+      <property name="title">
+       <string>Are you sure?</string>
+      </property>
+      <addaction name="separator"/>
+      <addaction name="separator"/>
+      <addaction name="actionYes"/>
+      <addaction name="actionNo"/>
+     </widget>
+     <addaction name="menuAre_you_sure"/>
+    </widget>
+    <addaction name="actionOpen_another_cliend"/>
+    <addaction name="separator"/>
+    <addaction name="actionCloseClient"/>
+    <addaction name="separator"/>
+    <addaction name="menuDelete_my_account"/>
+   </widget>
+   <addaction name="menuMain_menu"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionOpen_another_cliend">
+   <property name="text">
+    <string>Open another client</string>
+   </property>
+  </action>
+  <action name="actionCloseClient">
+   <property name="text">
+    <string>Close this client</string>
+   </property>
+  </action>
+  <action name="actionYes">
+   <property name="checkable">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>Yes</string>
+   </property>
+  </action>
+  <action name="actionNo">
+   <property name="checkable">
+    <bool>false</bool>
+   </property>
+   <property name="checked">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>No</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
